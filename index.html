@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Access Management System</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+<h1>🔐 User Access Management System</h1>
+<p>Secure login and role-based access platform</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+<a href="#home">Home</a>
+<a href="#features">Features</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- Home Section -->
+<section id="home">
+<h2>Welcome</h2>
+<p>
+This web application demonstrates a Login-Based User Access Control System.
+It allows users to securely log in and access different features depending
+on their roles such as Admin or Normal User.
+</p>
+</section>
+
+<!-- Login Card -->
+<section class="login-section">
+
+<div class="card" id="loginPage">
+
+<h2>Login</h2>
+
+<input type="text" id="username" placeholder="Enter Username">
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="login()">Login</button>
+
+<p id="message"></p>
+
+</div>
+
+</section>
+
+<!-- Admin Dashboard -->
+<div class="card hidden" id="adminPage">
+
+<h2>👑 Admin Dashboard</h2>
+<p>Admin has full access to manage users and system settings.</p>
+
+<div class="dashboard">
+<div class="box">Manage Users</div>
+<div class="box">System Reports</div>
+<div class="box">Security Settings</div>
+<div class="box">Database Control</div>
+</div>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+<!-- User Dashboard -->
+<div class="card hidden" id="userPage">
+
+<h2>👤 User Dashboard</h2>
+<p>Users can access their personal account features.</p>
+
+<div class="dashboard">
+<div class="box">View Profile</div>
+<div class="box">Activity History</div>
+<div class="box">Help Center</div>
+<div class="box">Account Settings</div>
+</div>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+<!-- Features -->
+<section id="features">
+<h2>System Features</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h3>🔑 Secure Login</h3>
+<p>Users must authenticate with a username and password.</p>
+</div>
+
+<div class="feature">
+<h3>👥 Role-Based Access</h3>
+<p>Different dashboards for Admin and normal users.</p>
+</div>
+
+<div class="feature">
+<h3>⚡ Fast Authentication</h3>
+<p>Uses efficient searching techniques for login validation.</p>
+</div>
+
+<div class="feature">
+<h3>🔒 Data Protection</h3>
+<p>Prevents unauthorized access to the system.</p>
+</div>
+
+</div>
+</section>
+
+<!-- About -->
+<section id="about">
+<h2>About This Project</h2>
+<p>
+The Login-Based User Access Application is designed to demonstrate
+basic authentication and role-based access control. It uses
+HTML for structure, CSS for styling, and JavaScript with basic
+Data Structures concepts for user validation.
+</p>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: support@example.com</p>
+<p>Phone: +91 98765 43210</p>
+</section>
+
+<footer>
+<p>© 2026 User Access Management System</p>
+</footer>
+
+<script src="script-dsa.js"></script>
+
+</body>
+</html>
