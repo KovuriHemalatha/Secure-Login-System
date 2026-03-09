@@ -1,111 +1,174 @@
-body{
+/* CO1: Basic CSS Syntax and Selectors */
+
+*{
 margin:0;
-font-family:Arial;
-background:#f4f6fa;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
+/* Body Styling */
+
+body{
+background:#f4f6f9;
+color:#333;
+line-height:1.6;
+}
+
+/* Header */
+
 header{
-background:#2c3e50;
+background:#1e3a8a;
 color:white;
 text-align:center;
 padding:20px;
 }
 
+/* Navigation */
+
 nav{
-background:#34495e;
-text-align:center;
-padding:10px;
+background:#111;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
 }
 
 nav a{
 color:white;
-margin:0 15px;
+padding:14px 20px;
 text-decoration:none;
-font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
-text-decoration:underline;
+background:#2563eb;
 }
+
+/* Sections */
 
 section{
 padding:40px;
 text-align:center;
 }
 
+/* Login Section */
+
 .login-section{
 display:flex;
 justify-content:center;
+align-items:center;
+padding:40px;
 }
+
+/* Card UI */
 
 .card{
 background:white;
 padding:30px;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
 width:350px;
-margin:20px auto;
+margin:auto;
+text-align:center;
 }
+
+/* Inputs */
 
 input{
 width:90%;
 padding:10px;
 margin:10px 0;
-border-radius:5px;
 border:1px solid #ccc;
+border-radius:5px;
 }
 
+/* Buttons */
+
 button{
-padding:10px;
-width:95%;
-border:none;
-background:#3498db;
+background:#2563eb;
 color:white;
-font-size:16px;
+border:none;
+padding:10px 20px;
 border-radius:5px;
 cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
-background:#2980b9;
+background:#1e40af;
 }
+
+/* Hidden class */
 
 .hidden{
 display:none;
 }
 
+/* Dashboard Layout - CO2 Flexbox */
+
 .dashboard{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 margin:20px 0;
 }
 
+/* Dashboard Boxes */
+
 .box{
-background:#ecf0ff;
+background:#e0e7ff;
 padding:20px;
 border-radius:8px;
 font-weight:bold;
+transition:0.3s;
 }
+
+.box:hover{
+background:#c7d2fe;
+transform:scale(1.05);
+}
+
+/* Feature Section */
 
 .feature-grid{
 display:grid;
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
-max-width:800px;
-margin:auto;
+margin-top:20px;
 }
 
 .feature{
 background:white;
 padding:20px;
-border-radius:8px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+border-radius:10px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
+.feature:hover{
+transform:translateY(-5px);
+}
+
+/* Footer */
+
 footer{
-background:#2c3e50;
+background:#111;
 color:white;
 text-align:center;
 padding:15px;
+margin-top:40px;
+}
+
+/* CO2 Responsive Design */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+.dashboard{
+grid-template-columns:1fr;
+}
+
 }
